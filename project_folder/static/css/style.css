@@ -1,137 +1,304 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Set a background color and text color for the entire page */
-body {
-    background-color: #f5f5f5;
-    color: #333;
-    font-family: Arial, sans-serif;
-}
-
-/* Style the header and navigation menu */
-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 0;
+.heading {
+    color: white;
 }
 
 nav {
+    /* flex */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* end of flex */
+
+    height: 100px;
+    position: fixed;
+    /* border: 1px solid green; */
+    width: 100%;
+    z-index: 200;
+    background-color: green
 }
 
-nav ul {
-    list-style: none;
+.list {
     display: flex;
+    list-style: none;
+    gap: 20px;
+
 }
 
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
+.list > li {
     font-weight: bold;
+    font-size: 20px;
+    color: white;
 }
 
-/* Style the logo */
-.logo img {
-    max-width: 100px;
-    height: auto;
-}
+/* 1rem = 16px */
 
-/* Style the hero section */
 .hero {
-    background-image: url('hero-background.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://media.istockphoto.com/id/1491190941/photo/uganda-map-soil-land-geology-cross-section-with-green-grass-and-rock-ground-texture-3d.jpg?s=2048x2048&w=is&k=20&c=KSdL21lOlwsTur0c34Y4b_lhVFULqFRALgniUV5gpao=");
+    height: 600px;
+    background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    /* position: relative; */
+
+}
+
+.seperator {
+    border-bottom: 2px solid yellow;
+    width: 200px;
+    padding-top: 20px;
+}
+
+.tech {
+    color: white;
+    font-size: 50px;
+    width: 400px;
+}
+
+.gain {
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.soft {
+    background-color:rgb(0, 8, 255);
+    position: absolute;
+    top:540px;
+    border-radius: 10px;
+    color: white;
+    padding: 30px 0;
+    left: 200px;
+    width: 350px;
+    z-index: 100;
+}
+.open {
+    position: absolute;
+    top: 0;
+    background-color:orange;
+}
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.now1:hover {
+    background-color: green;
+    cursor: pointer;
+    color: white;
+}
+.fields {
     text-align: center;
-    padding: 100px 0;
-    color: #fff;
+    position: relative;
+    background-color: aliceblue;
+    padding-bottom: 5rem;
 }
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.place {
+    font-size: 30px;
+    color: rgb(0, 8, 255);
 }
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+.alx {
+    font-size: 20px;
+    margin-top: 10px;
 }
+.tri {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
+    background-color: aliceblue;
+    bottom: -40px;
+    z-index: 120;
 
-.btn {
-    display: inline-block;
+    
+}
+.card {
+    height: 200px;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    border-radius: 20px;
+    position: relative;
 }
-
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.first {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+.last {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px 0;
+}
+.plus {
+    padding: 10px 20px;
+}
+.five {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 0 100px;
+    /* background-color: aliceblue; */
+    /* flex-direction: column; */
+}
+@media screen and (max-width: 991px) {
+    .five {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 50px;
+        padding: 0 50px;
+        /* background-color: aliceblue; */
+    }
+}
+.now {
+    background-color: orangered;
+    color: white;
+    position: absolute;
+}
+.btn {
+    border-radius: 3px; padding: 10px; border-color: green; color: green; background: transparent;
+}
 .btn:hover {
-    background-color: #0056b3;
+    background-color: green; color: white;
+    cursor: pointer;
+}
+.grade {
+    background-color: #eee;
+    height: 100%;
+    width: 100%;
+    border-style: outset;
+    /* margin-bottom: 20px; */
+    z-index: 100;
+    padding-top: 60px;
+    /* -webkit-clip-path: polygon(50% 17%, 100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+ clip-path: polygon(0% 2%, 200% 0, 100% 100%, 0% 100%, 0 84%, 0 0);   */
+}
+.rank {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    padding-top: 20px;
 }
 
-/* Style the featured dishes section */
-.featured-dishes {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+.rank__heading {
+    color: rgb(204, 66, 66);
+    font-size: 60px;
 }
-
-.featured-dishes h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.dish {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.dish img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.dish h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.dish p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.btn-secondary {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Style the footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+.long {
+    flex-wrap: wrap;
+    display: flex;
     padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(19, 19, 76);
+}
+.the {
+    max-width: 500px;
+    text-align: center;
+}
+.all {
+    /* position: relative; */
+
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.together {
+    padding-top: 20px;   
+}
+.tria {
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.word {
+    background-color: white;
+    padding-top: 5rem;
+    padding-bottom: 20px;
+}
+.herb {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.card1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.application-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    border: 2px solid #ccc;
+    background-color: green;
+    color: white;
+}
+.appform {
+    padding: 50px;
+}
+form input {
+    margin: 5px 0;
+    padding: 5px;
+}
+form label {
+    margin-right: 50px;
+}
+form button {
+    margin-top: 80px;
+    cursor: pointer;
+}
+.confirmation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+.cardz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    gap: 10px;
+    padding-top: 10px;
 }
 
+.cardz > a > img {
+    height: 100px;
+    width: 100px;
+}
+.alc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
